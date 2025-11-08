@@ -1,0 +1,116 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+.admin-sidebar {
+  width: 220px;
+  background: #111827;
+  color: #e5e7eb;
+  padding: 16px;
+}
+
+.admin-logo {
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-sidebar li a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.admin-sidebar li a:hover {
+  background: #1f2937;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 16px 18px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.admin-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+/* layout berita admin */
+.admin-berita {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .admin-berita {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid #e5e7eb;
+  padding: 6px 8px;
+}
+
+.admin-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  margin-top: 4px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+}
+
+.btn-admin-save {
+  margin-top: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #1d4ed8;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-admin-save:hover {
+  background: #1e40af;
+}
+
+.admin-message {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  color: #16a34a;
+}

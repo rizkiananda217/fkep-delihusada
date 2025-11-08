@@ -1,0 +1,261 @@
+/* ================== AKADEMIK PAGE ================== */
+
+.page-akademik {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+/* HERO */
+.akademik-hero {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(56, 189, 248, 0.12));
+  border-radius: 18px;
+  padding: 24px 22px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.akademik-hero::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 999px;
+  border: 2px solid rgba(59, 130, 246, 0.2);
+}
+
+.akademik-hero::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  bottom: -60px;
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.14), transparent 70%);
+}
+
+.akademik-hero h1 {
+  margin: 6px 0 8px;
+  font-size: 1.8rem;
+  color: var(--primary, #1d4ed8);
+}
+
+.akademik-hero p {
+  margin: 0;
+  max-width: 620px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--text-main, #1f2933);
+}
+
+.akademik-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--primary, #1d4ed8);
+}
+
+/* SECTION WRAPPER */
+.akademik-section {
+  margin-top: 28px;
+}
+
+/* TITLES */
+.section-title {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  color: var(--primary-dark, #111827);
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-soft, #6b7280);
+  margin-bottom: 16px;
+}
+
+/* GRID LAYOUTS */
+.prodi-grid,
+.layanan-grid,
+.fasilitas-grid,
+.visi-misi-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.prodi-grid {
+  margin-top: 12px;
+}
+
+.visi-misi-grid {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+}
+
+@media (max-width: 900px) {
+  .visi-misi-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .prodi-grid,
+  .layanan-grid,
+  .fasilitas-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .layanan-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .fasilitas-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .prodi-grid,
+  .layanan-grid,
+  .fasilitas-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* CARDS */
+.prodi-card,
+.layanan-card,
+.fasilitas-card,
+.visi-card,
+.misi-card {
+  background: var(--surface, #ffffff);
+  border-radius: 14px;
+  padding: 14px 14px 16px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.prodi-card h3,
+.layanan-card h3,
+.fasilitas-card h3,
+.visi-card h3,
+.misi-card h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: var(--primary-dark, #111827);
+}
+
+.prodi-card p,
+.layanan-card p,
+.fasilitas-card p,
+.visi-card p,
+.misi-card p {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-main, #374151);
+}
+
+.prodi-card ul,
+.misi-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.prodi-card li,
+.misi-card li {
+  font-size: 0.88rem;
+  margin-bottom: 4px;
+  color: var(--text-soft, #6b7280);
+}
+
+/* LAYANAN LINK */
+.layanan-card a {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: var(--primary, #1d4ed8);
+}
+
+.layanan-card a:hover {
+  background: rgba(59, 130, 246, 0.06);
+}
+
+/* TABEL KURIKULUM */
+.kurikulum-table-wrapper {
+  margin-top: 12px;
+}
+
+.table-kurikulum td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.table-kurikulum td,
+.table-kurikulum th {
+  font-size: 0.86rem;
+}
+
+.table-kurikulum a {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--primary, #1d4ed8);
+}
+
+.table-kurikulum a:hover {
+  text-decoration: underline;
+}
+
+/* ================== ANIMASI HALUS ================== */
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.18s; }
+.delay-3 { animation-delay: 0.26s; }
+.delay-4 { animation-delay: 0.34s; }
+.delay-5 { animation-delay: 0.42s; }
+.delay-6 { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== FASILITAS DENGAN GAMBAR ========== */
+
+.fasilitas-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fasilitas-card img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}

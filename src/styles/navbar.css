@@ -1,0 +1,150 @@
+/* ==============================
+   NAVBAR FAKULTAS KEPERAWATAN
+   ============================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(135deg, #00796B, #009688);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+}
+
+/* Lebih tinggi & lega */
+.navbar-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Area (gambar + teks) */
+.logo-area {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  gap: 10px;
+}
+
+.logo-image {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.08);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-main {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo-sub {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+/* ==========================================
+   MENU NAVIGASI + ANIMASI TAB MENU
+   ========================================== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  position: relative;
+  color: #E0F7F4;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.25s ease;
+  padding-bottom: 4px;
+  overflow: hidden;
+}
+
+/* Garis animasi (awal tersembunyi) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;                /* ubah dari -2px ke 0 agar kelihatan */
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+  z-index: 2;               /* pastikan di atas background navbar */
+}
+
+/* Hover: garis meluncur dari kiri ke kanan */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Aktif: garis penuh dan tetap terlihat */
+.nav-links a.active::after {
+  width: 100%;
+}
+
+
+/* Aktif: garis penuh dan teks putih */
+.nav-links a.active {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+  background: #ffffff;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .logo-image {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logo-main {
+    font-size: 1rem;
+  }
+
+  .logo-sub {
+    font-size: 0.75rem;
+  }
+}

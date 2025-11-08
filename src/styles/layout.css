@@ -1,0 +1,38 @@
+/* ========== LAYOUT GLOBAL ========== */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 80px 16px 40px; /* 80px supaya tidak ketimpa navbar fixed */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Struktur halaman umum */
+.page h1 {
+  margin-bottom: 16px;
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.page h2 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.page p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.section {
+  margin-top: 24px;
+}

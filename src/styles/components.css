@@ -1,0 +1,465 @@
+/* ========== LIST, TABEL, CARD, FORM ========== */
+
+/* List sederhana */
+.list-simple {
+  margin-left: 18px;
+}
+
+.list-simple li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+/* Tabel sederhana (Akademik / Kurikulum) */
+.table-simple {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  background: var(--surface);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table-simple th,
+.table-simple td {
+  border: 1px solid var(--border-soft);
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+.table-simple th {
+  background: #eef2ff;
+  color: var(--primary);
+}
+
+/* Card (misal Berita) */
+.card {
+  background: var(--surface);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.card .meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+/* Section berita yang dibungkus card */
+.section.berita {
+  background: var(--surface);
+  padding: 24px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+}
+
+.section.berita h2 {
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+/* Efek hover untuk list pengumuman */
+.section.berita .list-simple li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-soft);
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.section.berita .list-simple li:last-child {
+  border-bottom: none;
+}
+
+.section.berita .list-simple li:hover {
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+/* Grid kontak (Kontak.jsx) */
+.kontak-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+/* Form sederhana */
+.form-simple label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.form-simple input,
+.form-simple textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid var(--border-soft);
+  background: var(--surface);
+  font-size: 0.9rem;
+}
+
+.form-simple textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-simple button {
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background: var(--secondary);
+  color: var(--surface);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-simple button:hover {
+  background: var(--accent);
+  box-shadow: 0 6px 16px rgba(22, 163, 74, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Strip statistik fakultas */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  background: #ecfdf5;
+  border-radius: 14px;
+  padding: 14px 18px;
+  border: 1px solid #bbf7d0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.stat-detail {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+
+
+/* Link di card berita */
+.card-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* Galeri foto */
+.gallery-section {
+  background: transparent;
+}
+
+.gallery-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.gallery-item {
+  background: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item figcaption {
+  padding: 8px 10px 10px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* ====== SECTION BERITA DI HOME ====== */
+
+/* Wrapper di dalam main-content, bukan full width lagi */
+.berita-wrapper {
+  padding-top: 24px;
+}
+
+/* Ikut lebar utama (max-width sama seperti konten lain) */
+.berita-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Panel berita – tampil seperti section biasa (menyatu dengan atas) */
+.berita-section {
+  background: var(--surface);
+  padding: 24px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+  margin-top: 0;
+}
+
+.berita-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.berita-section h2 {
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.berita-subtitle {
+  font-size: 0.9rem;
+  color: #334155;
+  max-width: 520px;
+}
+
+/* Link "lihat semua berita" di pojok kanan */
+.berita-all-link {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.berita-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Grid card berita (dipakai di Home) */
+.berita-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* Card berita */
+.berita-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  padding: 14px 14px 16px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Animasi hover tambahan via CSS (backup kalau JS mati) */
+.berita-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.22);
+}
+
+/* Baris meta atas */
+.berita-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 8px;
+}
+
+/* Badge kategori */
+.badge-category {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(0, 168, 143, 0.12);
+  color: #00796B;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.berita-date {
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+/* Judul & isi berita */
+.berita-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #0F172A;
+}
+
+.berita-excerpt {
+  font-size: 0.9rem;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+/* Link baca selengkapnya */
+.berita-link {
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .berita-wrapper {
+    padding-top: 20px;
+  }
+
+  .berita-section {
+    padding: 18px 16px;
+  }
+
+  .berita-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .berita-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ====== GALERI DI HOME (BERWARNA & HIDUP) ====== */
+
+.gallery-section {
+  margin-top: 32px;
+  background: linear-gradient(135deg, #D6F5F0, #E3FAF6);
+  border-radius: 16px;
+  padding: 28px 22px 34px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.gallery-header h2 {
+  font-size: 1.7rem;
+  color: #004039;
+  margin-bottom: 6px;
+}
+
+.gallery-header p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+/* Grid 2 kolom dengan foto lebih besar */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 24px;
+}
+
+/* Kartu galeri dengan border gradasi warna-warni */
+.gallery-item {
+  position: relative;
+  border-radius: 18px;
+  padding: 3px; /* ruang untuk border gradasi */
+  background: linear-gradient(135deg, #00B894, #55E6C1);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Variasi warna tiap kartu */
+.gallery-item:nth-child(2) {
+  background: linear-gradient(135deg, #0984E3, #74B9FF);
+}
+.gallery-item:nth-child(3) {
+  background: linear-gradient(135deg, #E17055, #FAB1A0);
+}
+.gallery-item:nth-child(4) {
+  background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+}
+
+/* Isi kartu (background lembut) */
+.gallery-inner {
+  background: var(--surface);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Gambar */
+.gallery-image-wrapper img {
+  width: 100%;
+  height: 300px; /* kamu bisa ubah 300 → 340 kalau mau lebih tinggi */
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom halus di gambar saat hover */
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Caption di luar foto (di bawah) */
+.gallery-inner figcaption {
+  padding: 10px 12px 12px;
+}
+
+.gallery-caption {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Efek hover di kartu */
+.gallery-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.22);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 22px 16px 28px;
+  }
+
+  .gallery-image-wrapper img {
+    height: 160px;
+  }
+}
+
