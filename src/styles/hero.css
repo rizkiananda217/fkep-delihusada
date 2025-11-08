@@ -310,6 +310,96 @@
   }
 }
 
+/* ==========================
+   GALERI FOTO DI HOME
+   ========================== */
+
+.gallery-section {
+  margin: 32px 0 40px;
+}
+
+.gallery-header {
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.gallery-header h2 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.gallery-header p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 720px;
+}
+
+/* GRID 2 FOTO PER BARIS – KHUSUS DI HALAMAN HOME */
+.home .gallery-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+/* Card galeri */
+.home .gallery-item {
+  background: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  border: 1px solid var(--border-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home .gallery-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Bungkus gambar */
+.home .gallery-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.home .gallery-image-wrapper img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Caption */
+.home .gallery-caption {
+  padding: 10px 12px 12px;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  text-align: center;
+}
+
+/* Efek hover halus */
+.home .gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
+}
+
+.home .gallery-item:hover .gallery-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* RESPONSIF HP: 1 FOTO PER BARIS */
+@media (max-width: 768px) {
+  .home .gallery-grid {
+    grid-template-columns: 1fr !important; /* 1 kolom di layar kecil */
+  }
+
+  .home .gallery-image-wrapper img {
+    height: 200px;
+  }
+}
 
 
 
